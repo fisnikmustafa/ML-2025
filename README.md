@@ -4,7 +4,7 @@
 ![Universiteti-i-Prishtinës-Hasan-Prishtina (1)](https://github.com/user-attachments/assets/8f672579-f493-4d33-9352-6fc645d38733)
 - **University**: University of Pristina
 - **Faculty**: Faculty of Electrical and Computer Engineering
-- **Mentor**: Dr. Sc. Mërgim H. HOTI
+- **Mentor**: Dr. Sc. Lule Ahmedi & Dr. Sc. Mërgim H. HOTI
 - **Students**:
   - Altin MUSLIU
   - Edi MORINA
