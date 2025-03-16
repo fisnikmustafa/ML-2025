@@ -1,9 +1,11 @@
-# Machine Learning - 2025
+# Application of Machine Learning Algorithms for Physical Activity Analysis in the Workout & Fitness Dataset
 
 ## University and Contributors
 ![Universiteti-i-Prishtinës-Hasan-Prishtina (1)](https://github.com/user-attachments/assets/8f672579-f493-4d33-9352-6fc645d38733)
 - **University**: University of Pristina
 - **Faculty**: Faculty of Electrical and Computer Engineering
+- **Level**: Master's
+- **Course**: Machine Learning
 - **Mentor**: Dr. Sc. Lule Ahmedi & Dr. Sc. Mërgim H. HOTI
 - **Students**:
   - Altin MUSLIU
@@ -24,7 +26,7 @@ This script works with two datasets:
 
 [FitLife: Health & Fitness Tracking Dataset](https://www.kaggle.com/datasets/jijagallery/fitlife-health-and-fitness-tracking-dataset): This dataset includes additional health-related information, such as Blood Pressure, Stress Level, Smoking Status, Health Condition, etc. These attributes are merged with the first dataset based on matching features (like Age, Height (cm), Weight (kg), and BMI), allowing us to enhance the information in the first dataset and make it more unique.
 
-The primary focus is on matching the individuals between the two datasets using common features, while adding supplementary information from the second dataset to enrich the data for further analysis.
+The primary focus is on matching the individuals between the two datasets using common features, while adding supplementary information from the second dataset to enrich the data for further analysis. The final (merged) dataset contains 10000 rows and 22 attributes.
 
 ## Overview
 
@@ -78,4 +80,4 @@ The final dataset is split into training and testing sets (80%/20%) using `train
 
 ### 8. Saving the Final Dataset
 
-The cleaned and preprocessed dataset is saved as `merged_dataset_filter_by_gender3.csv` in the current working directory.
+The cleaned and preprocessed dataset is saved as `processed_dataset.csv` in the current working directory.
