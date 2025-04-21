@@ -49,9 +49,11 @@ The script starts by loading two datasets, performs the following:
 - **Renaming Columns**: Ensures column names are consistent between the two datasets.
   
   We merged the Workout & Fitness Tracker Dataset and the FitLife: Health & Fitness Tracking Dataset into one dataset:
-  ![Merged Datasets](megred_datasets.png)
+  
+  ![Merged Datasets](merged_datasets.png)
 
   Types of Columns From Merged Datasets:
+  
    ![Column Types](column_types.png)
 
 ### 3. Data Merging & Outlier Removal
@@ -59,7 +61,8 @@ The script starts by loading two datasets, performs the following:
 - After matching the data, the script merges relevant columns from `dataset2` with `dataset1` based on the nearest neighbor results.
 - Outliers are detected and removed using the IQR method for `BMI`, `Blood Pressure Systolic`, and `Blood Pressure Diastolic`.
 
-Outlier visualization using box plots:
+Outliers visualization using box plots:
+
  ![Outliers](outliers.png)
 
 ### 4. Encoding & Feature Engineering
@@ -89,6 +92,7 @@ In the second phase of the project, we focus on building and evaluating various 
 - Features were selected based on their relevance to the prediction task, with a focus on numerical attributes such as Age, Height, Weight, Workout Duration, Heart Rate, Sleep Hours, BMI, etc.
   
   Visualization of the correlation between Calories Burned and other columns:
+  
   ![Korrelacion](korrelacion.png)
 
 ### 2. Data Normalization
@@ -102,6 +106,7 @@ In the second phase of the project, we focus on building and evaluating various 
 - The feature set `X` contains all columns except `Calories Burned`, which is the target variable `y`.
   
   Visualization of the training and testing data:
+  
  ![Trajnim](trajnim_testim.png)
 
 ### 4. Model Selection and Training
