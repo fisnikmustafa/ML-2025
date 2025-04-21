@@ -95,6 +95,10 @@ In the second phase of the project, we focus on building and evaluating various 
   
   ![Korrelacion](korrelacioni.png)
 
+  Visualization of the correlation of each column with others:
+
+  ![Korrelacion Pergjithshem](korrelacioni_pergjithshem.png)
+  
 ### 2. Data Normalization
 
 - All selected numerical features were standardized using **StandardScaler** to bring them to a common scale.
