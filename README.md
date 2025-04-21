@@ -93,7 +93,7 @@ In the second phase of the project, we focus on building and evaluating various 
   
   Visualization of the correlation between Calories Burned and other columns:
   
-  ![Korrelacion](korrelacion.png)
+  ![Korrelacion](korrelacioni.png)
 
 ### 2. Data Normalization
 
