@@ -56,7 +56,7 @@ The script starts by loading two datasets, performs the following:
   
    ![Column Types](column_types.png)
 
-### 3. Data Merging & Outlier Removal
+### 2. Data Merging & Outlier Removal
 
 - After matching the data, the script merges relevant columns from `dataset2` with `dataset1` based on the nearest neighbor results.
 - Outliers are detected and removed using the IQR method for `BMI`, `Blood Pressure Systolic`, and `Blood Pressure Diastolic`.
@@ -65,20 +65,20 @@ Outliers visualization using box plots:
 
  ![Outliers](outliers.png)
 
-### 4. Encoding & Feature Engineering
+### 3. Encoding & Feature Engineering
 
 - **Label Encoding**: Columns with categorical values such as Mood and Smoking Status are encoded using `LabelEncoder`.
 - **One-Hot Encoding**: Categorical columns such as Workout Type and Intensity are one-hot encoded using `pd.get_dummies()`.
 
-### 6. Data Scaling
+### 4. Data Scaling
 
 The numeric features are standardized using `StandardScaler` to ensure they have zero mean and unit variance, which is essential for machine learning models.
 
-### 7. Data Splitting
+### 5. Data Splitting
 
 The final dataset is split into training and testing sets (80%/20%) using `train_test_split()`.
 
-### 8. Saving the Final Dataset
+### 6. Saving the Final Dataset
 
 The cleaned and preprocessed dataset is saved as `processed_dataset.csv` in the current working directory.
  
