@@ -47,28 +47,25 @@ The script starts by loading two datasets, performs the following:
 - **BMI Calculation**: Adds a new column `BMI` to `dataset1` using the formula `Weight / Height^2`.
 - **Gender Standardization**: Maps gender labels (`Male`, `Female`, `Other`) to a consistent format (`M`, `F`, `Other`).
 - **Renaming Columns**: Ensures column names are consistent between the two datasets.
+  
+  We merged the Workout & Fitness Tracker Dataset and the FitLife: Health & Fitness Tracking Dataset into one dataset:
+  ![Merged Datasets](megred_datasets.png)
 
-### 2. Feature Matching Using KD-Tree
-
-To match individuals in `dataset1` and `dataset2` based on the specified features (e.g., Age, Height, Weight, Resting Heart Rate, BMI):
-- Data is normalized using `MinMaxScaler`.
-- A KD-Tree is created for efficient nearest-neighbor search.
-- For each gender (`M`, `F`), the script matches individuals from `dataset1` to the closest individuals in `dataset2` based on the weighted features.
-- For those labeled as "Other," the script matches based on features without considering gender.
+  Types of Columns From Merged Datasets:
+   ![Column Types](column_types.png)
 
 ### 3. Data Merging & Outlier Removal
 
 - After matching the data, the script merges relevant columns from `dataset2` with `dataset1` based on the nearest neighbor results.
 - Outliers are detected and removed using the IQR method for `BMI`, `Blood Pressure Systolic`, and `Blood Pressure Diastolic`.
 
+Outlier visualization using box plots:
+ ![Outliers](outliers.png)
+
 ### 4. Encoding & Feature Engineering
 
 - **Label Encoding**: Columns with categorical values such as Mood and Smoking Status are encoded using `LabelEncoder`.
 - **One-Hot Encoding**: Categorical columns such as Workout Type and Intensity are one-hot encoded using `pd.get_dummies()`.
-
-### 5. Data Visualizations
-
-- **Boxplots**: The script generates boxplots for numeric features such as `BMI`, `Blood Pressure Systolic`, and `Blood Pressure Diastolic` to visualize the distribution of values and identify any remaining outliers.
 
 ### 6. Data Scaling
 
@@ -81,3 +78,70 @@ The final dataset is split into training and testing sets (80%/20%) using `train
 ### 8. Saving the Final Dataset
 
 The cleaned and preprocessed dataset is saved as `processed_dataset.csv` in the current working directory.
+ 
+## Phase 2: Model Training
+
+In the second phase of the project, we focus on building and evaluating various machine learning models to predict the number of **Calories Burned**.
+
+### 1. Feature Selection and Correlation Analysis
+
+- A correlation analysis was conducted between all features and the target variable `Calories Burned`. 
+- Features were selected based on their relevance to the prediction task, with a focus on numerical attributes such as Age, Height, Weight, Workout Duration, Heart Rate, Sleep Hours, BMI, etc.
+  
+  Visualization of the correlation between Calories Burned and other columns:
+  ![Korrelacion](korrelacion.png)
+
+### 2. Data Normalization
+
+- All selected numerical features were standardized using **StandardScaler** to bring them to a common scale.
+- This step is essential to ensure that features with different units (e.g., height in cm vs. calories) do not disproportionately affect the model performance.
+
+### 3. Splitting the Data
+
+- The dataset was split into **training** (80%) and **testing** (20%) subsets using `train_test_split`.
+- The feature set `X` contains all columns except `Calories Burned`, which is the target variable `y`.
+  
+  Visualization of the training and testing data:
+ ![Trajnim](trajnim_testim.png)
+
+### 4. Model Selection and Training
+
+Several regression algorithms were trained and evaluated on the dataset:
+
+- **Linear Regression**
+- **Ridge Regression**
+- **Lasso Regression**
+- **Decision Tree Regressor**
+- **Random Forest Regressor**
+- **Gradient Boosting Regressor**
+- **Support Vector Regressor (SVR)**
+- **XGBoost Regressor**
+
+Each model was trained on the training data and tested on the test data.
+
+### 5. Model Evaluation
+
+Models were evaluated using three key metrics:
+- **Mean Squared Error (MSE)**
+- **Mean Absolute Error (MAE)**
+- **R² Score**
+
+The results were stored in a DataFrame and saved in a file named `model_performance_metrics.csv`.
+
+**Model Performance Visualization:**
+
+- Bar plots were generated to compare the performance of each model in terms of MSE, MAE, and R² Score.
+  
+![Krahasimi i Perfomances](krahasimi_perfomances.png)
+
+**Actual vs Predicted Visualization:**
+
+- Scatter plots were also created to compare actual vs. predicted values for `Calories Burned` for each model.
+
+![Saktesia Modelit](saktesia_modelit.png)
+
+
+### Additional Observations and Conclusions
+
+As a conclusion, the data used for training the model is not ideal. Additionally, the correlation between the features and the target variable is quite low. Apart from **Calories Burned**, we tested several other columns as potential targets, but the results still showed weak correlations. This suggests that the selected datasets do not contain high-quality data for training the model effectively. To achieve better model performance, it is necessary to replace the current datasets with new and more relevant data.
+
