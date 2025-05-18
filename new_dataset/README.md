@@ -1,4 +1,22 @@
-# 🧠 Obesity Classification Using BRFSS Data
+# Classifying High Obesity Prevalence in U.S. Populations Using BRFSS Data
+
+## 📑 Table of Contents
+
+1. [Dataset Overview](#dataset-overview)  
+2. [Phase 1: Data Preparation](#phase-1-data-preparation)  
+   - [Target Variable](#target-variable)  
+   - [Feature Selection](#feature-selection)  
+   - [Handling Class Imbalance](#handling-class-imbalance)  
+   - [Preprocessing Summary](#preprocessing-summary)  
+3. [Phase 2: Modeling](#phase-2-modeling)  
+   - [Model Choice](#model-choice)  
+   - [Hyperparameter Tuning](#hyperparameter-tuning)  
+4. [Phase 3: Evaluation & Interpretation](#phase-3-evaluation--interpretation)  
+   - [Performance Metrics](#performance-metrics)  
+   - [Visualizations](#visualizations)  
+   - [Feature Importance](#feature-importance)  
+5. [Conclusion](#conclusion)
+
 
 ## 📊 Dataset Overview
 
