@@ -12,6 +12,11 @@
   - Edi MORINA
   - Fisnik MUSTAFA
 
+> ⚠️ **IMPORTANT:** This is the documentation of work done with the **old dataset**.  
+> A new dataset was chosen with a new goal.  
+> Please refer to the [`new_dataset`](./new_dataset/) folder for the updated work, which includes its own `README.md` documentation.
+
+
 ## Table of Contents
 - [Dataset](#dataset)
 - [Overview](#overview)
