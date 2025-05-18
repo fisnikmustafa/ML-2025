@@ -365,3 +365,11 @@ This refinement aligned with the core project objective—to explore whether **p
 
 ---
 
+## Vizualizations POWERBI
+
+![Alt text](imgs/education.png)
+![Alt text](imgs/phase3_age.png)
+![Alt text](imgs/phase3_gender.png)
+![Alt text](imgs/phase3_location.png)
+![Alt text](imgs/phase3_salary.png)
+
